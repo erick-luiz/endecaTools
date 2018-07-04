@@ -216,8 +216,8 @@ let html =`
 
 let divA = document.createElement('div');
 divA.innerHTML = html;
-//document.querySelector('Body').insertBefore(divA, document.querySelector('#workbenchContainer'));
-document.querySelector('Body').insertBefore(divA, document.querySelector('.skiplinks'));
+document.querySelector('Body').insertBefore(divA, document.querySelector('#workbenchContainer'));
+//document.querySelector('Body').insertBefore(divA, document.querySelector('.skiplinks'));
 
     function openAndClose(element, button, listElements = []){
         button.addEventListener("click", function(){
