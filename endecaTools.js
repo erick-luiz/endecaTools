@@ -2,7 +2,7 @@
 // @name         Endeca Tools
 // @version      0.1
 // @author       Erick Luiz
-// @match        http://www.moodle.sead.furg.br/login/index.php*
+// @match        http://localhost:8006/ifcr/sites*
 // @require https://code.jquery.com/jquery-2.1.4.min.js
 // @grant   GM_getValue
 // @grant   GM_setValue
@@ -188,11 +188,9 @@ let encodeHTML =`<div id="unicode" style="min-width:400px;display:none;min-heigh
     </div>`;
 
 
-let divResourceFacil = `<div id='resource-facil' style="min-width:400px;min-height: 400px;border: solid 1px #ccc; display:none;">
-         <textarea id="entradaResourceFacil" placeholder="Entrada do XML do Cartucho" style="width: 100%; min-height: 300px; border:solid 1px;margin:20px 0;traslation:all 2s;">
-         </textarea>
-         <textarea id="saidaResourceFacil" placeholder="Entrada do XML do Cartucho" style="width: 100%; min-height: 300px; border:solid 1px;margin:20px 0;traslation:all 2s;">
-         </textarea>
+let divResourceFacil = `<div id='resource-facil' style="min-width:400px;min-height: 400px;margin:1%">
+         <textarea id="entradaResourceFacil" placeholder="Entrada do XML do Cartucho" style="width: 50%; min-height: 300px; border:solid 1px;margin:20px 0;traslation:all 2s;"></textarea>
+         <textarea id="saidaResourceFacil" placeholder="Saída: Resource a ser preenchido" style="width: 49%; min-height: 300px; border:solid 1px;margin:20px 0;traslation:all 2s;"></textarea>
      <div>`;
 
 let html =`
@@ -235,7 +233,7 @@ document.querySelector('Body').insertBefore(divA, document.querySelector('#workb
 
     var contentHtml = {
         resourceFacil:'resource-facil',
-        resourceFacilTitle:`lalala xxxxx`,
+        resourceFacilTitle:`Resource Fácil - Cole o cartucho e pegue o Resource`,
         encode:'unicode',
         encodeTitle: `Formatação do encode para código de acentuação`
     }
