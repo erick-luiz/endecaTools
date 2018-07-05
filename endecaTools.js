@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Endeca Tools
-// @version      0.1
+// @version      0.2
 // @author       Erick Luiz
 // @match        http://localhost:8006/ifcr/sites*
 // @require https://code.jquery.com/jquery-2.1.4.min.js
