@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Endeca Tools
-// @version      0.2
+// @version      0.3
 // @author       Erick Luiz
 // @match        http://localhost:8006/ifcr/sites*
 // @grant   GM_getValue
