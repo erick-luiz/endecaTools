@@ -279,7 +279,7 @@ document.querySelector('Body').insertBefore(divA, document.querySelector('#workb
 let setEvents = (function(){
     let elementActive;
     for(let i = 0; i < anchorsModalOpen.length; i++){
-        anchorsModalOpen[i].addEventListener('click',function(){
+        anchorsModalOpen[i].addEventListener('click',function(evt){
             evt.preventDefault();
             modalHead.innerText = contentHtml[this.id + 'Title'];
 
