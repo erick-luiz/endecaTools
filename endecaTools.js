@@ -3,7 +3,6 @@
 // @version      0.2
 // @author       Erick Luiz
 // @match        http://localhost:8006/ifcr/sites*
-// @require https://code.jquery.com/jquery-2.1.4.min.js
 // @grant   GM_getValue
 // @grant   GM_setValue
 // @grant   GM_getResourceURL
@@ -240,8 +239,7 @@ document.querySelector('Body').insertBefore(divA, document.querySelector('#workb
 
     let modal = document.querySelector('.modal');
     let btnModalClose = document.querySelector('.modal-close');
-    // Aviso por não ter carregado jquery ainda!
-    let anchorsModalOpen = $('.modal-open');
+    let anchorsModalOpen = document.querySelectorAll('.modal-open');
     let modalHead = document.querySelector('.modal-head h1');
     let modalBody = document.querySelector('.modal-body');
 
@@ -280,16 +278,17 @@ document.querySelector('Body').insertBefore(divA, document.querySelector('#workb
     }
 let setEvents = (function(){
     let elementActive;
+    for(let i = 0; i < anchorsModalOpen.length; i++){
+        anchorsModalOpen[i].addEventListener('click',function(){
+            evt.preventDefault();
+            modalHead.innerText = contentHtml[this.id + 'Title'];
 
-    anchorsModalOpen.on('click',function(evt){
-        evt.preventDefault();
-        modalHead.innerText = contentHtml[this.id + 'Title'];
+            elementActive = document.querySelector('#'+contentHtml[this.id]);
+            elementActive.style.display = '';
 
-        elementActive = document.querySelector('#'+contentHtml[this.id]);
-        elementActive.style.display = '';
-
-        modal.style.display = '';
-    });
+            modal.style.display = '';
+        });
+    }
     btnModalClose.addEventListener('click',function(){
         elementActive.style.display = 'none';
         modal.style.display = 'none';
