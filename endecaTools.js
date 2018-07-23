@@ -23,10 +23,8 @@
     }
 
     // ******************** Functions of Unicode ****************************** //
-
     // Converter Text to Unicode by Nardon //
-
-
+    // This function is of internet //
    var converter = function() {
         var str = unicodeEntrada.value;
         var highsurrogate = 0;
