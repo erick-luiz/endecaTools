@@ -185,7 +185,7 @@ let encodeHTML =`<div id="unicode" style="min-width:400px;display:none;min-heigh
     </div>`;
 
 
-let divResourceFacil = `<div id='resource-facil' style="min-width:400px;min-height: 400px;margin:1%">
+let divResourceFacil = `<div id='resource-facil' style="min-width:400px;display:none; min-height: 400px;margin:1%">
          <textarea id="entradaResourceFacil" placeholder="Entrada do XML do Cartucho" style="width: 50%; min-height: 300px; border:solid 1px;margin:20px 0;traslation:all 2s;"></textarea>
          <textarea id="saidaResourceFacil" placeholder="Saída: Resource a ser preenchido" style="width: 49%; min-height: 300px; border:solid 1px;margin:20px 0;traslation:all 2s;"></textarea>
      <div>`;
